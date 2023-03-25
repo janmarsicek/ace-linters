@@ -9,11 +9,10 @@ import {
     toCompletions,
     toTsOffset, JsxEmit, toTextEdits, toHover
 } from "../../type-converters/typescript-converters";
-import TsServiceOptions = AceLinters.TsServiceOptions;
-import {AceLinters} from "../../types";
+import {TsServiceOptions, LanguageService} from "../../types";
 import * as lsp from "vscode-languageserver-protocol";
 
-export class TypescriptService extends BaseService<TsServiceOptions> implements ts.LanguageServiceHost, AceLinters.LanguageService {
+export class TypescriptService extends BaseService<TsServiceOptions> implements ts.LanguageServiceHost, LanguageService {
     $service: ts.LanguageService;
     $defaultCompilerOptions = {
         allowJs: true,

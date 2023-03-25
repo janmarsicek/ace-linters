@@ -14,8 +14,7 @@ import {
 import * as oop from "ace-code/src/lib/oop";
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
 import {IMessageController} from "./types/message-controller-interface";
-import ServiceOptionsMap = AceLinters.ServiceOptionsMap;
-import {AceLinters} from "./types";
+import {ServiceOptionsMap, ServiceOptions} from "./types";
 import * as lsp from "vscode-languageserver-protocol";
 
 export class MessageController implements IMessageController {
@@ -72,7 +71,7 @@ export class MessageController implements IMessageController {
         this.postMessage(new ChangeModeMessage(sessionId, value, mode), callback);
     }
 
-    changeOptions(sessionId: string, options: AceLinters.ServiceOptions, callback?: () => void, merge = false) {
+    changeOptions(sessionId: string, options: ServiceOptions, callback?: () => void, merge = false) {
         this.postMessage(new ChangeOptionsMessage(sessionId, options, merge), callback);
     }
 

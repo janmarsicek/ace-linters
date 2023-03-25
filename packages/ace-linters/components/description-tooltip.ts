@@ -1,5 +1,5 @@
 import {LanguageProvider} from "../language-provider";
-import {Ace} from "ace-code";
+import type {Ace} from "ace-code";
 import {Tooltip} from "ace-code/src/tooltip";
 import Editor = Ace.Editor;
 

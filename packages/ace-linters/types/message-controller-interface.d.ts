@@ -1,5 +1,5 @@
 import {Ace} from "ace-code";
-import {AceLinters} from "./language-service";
+import {ServiceOptions} from "./language-service";
 import * as lsp from "vscode-languageserver-protocol";
 
 export interface IMessageController {
@@ -19,7 +19,7 @@ export interface IMessageController {
 
     changeMode(sessionId: string, value: string, mode: string, callback?: () => void);
 
-    changeOptions(sessionId: string, options: AceLinters.ServiceOptions, callback?: () => void);
+    changeOptions(sessionId: string, options: ServiceOptions, callback?: () => void);
 
     dispose(sessionId: string, callback?: () => void): void;
 

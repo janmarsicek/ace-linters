@@ -17,8 +17,7 @@ import {
     toCompletions,
     toResolvedCompletion, toTooltip
 } from "../type-converters/lsp-converters";
-import {AceLinters} from "../types";
-import Tooltip = AceLinters.Tooltip;
+import {Tooltip} from "../types1";
 
 
 describe('Converters from/to Language Server Protocol', () => {

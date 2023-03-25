@@ -1,14 +1,13 @@
 import {BaseService} from "../base-service";
-import {AceLinters} from "../../types";
+import {PythonServiceOptions, LanguageService} from "../../types";
 import * as lsp from "vscode-languageserver-protocol";
 import init, {
     check,
     defaultSettings,
 } from "./pkg";
 import {toDiagnostics} from "./python-converters";
-import PythonServiceOptions = AceLinters.PythonServiceOptions;
 
-export class PythonService extends BaseService<PythonServiceOptions> implements AceLinters.LanguageService {
+export class PythonService extends BaseService<PythonServiceOptions> implements LanguageService {
     $service;
     initOutput;
 

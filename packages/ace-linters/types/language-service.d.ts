@@ -5,7 +5,7 @@ import {TextDocument} from "vscode-languageserver-textdocument";
 import {Ace} from "ace-code";
 import {TextDocumentIdentifier, TextDocumentItem} from "vscode-languageserver-protocol";
 
-export declare namespace AceLinters {
+
     export interface LanguageService {
         documents: { [sessionID: string]: TextDocument };
         $service;
@@ -39,7 +39,7 @@ export declare namespace AceLinters {
         getDocumentValue(uri: string): string;
     }
 
-    interface TooltipContent {
+    export interface TooltipContent {
         type: CommonConverter.TooltipType,
         text: string
     }
@@ -139,4 +139,4 @@ export declare namespace AceLinters {
     }
     
     export type SupportedServices = "json" | "typescript" | "css" | "html" | "yaml" | "php" | "xml" | "javascript" | "lua" | "less" | "scss" | "python";
-}
+

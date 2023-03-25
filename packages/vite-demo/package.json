@@ -1,0 +1,17 @@
+{
+  "name": "vite-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^4.0.3"
+  },
+  "type": "module",
+  "dependencies": {
+    "ace-linters": "^0.4.1",
+    "vite-plugin-commonjs": "^0.6.2"
+  }
+}

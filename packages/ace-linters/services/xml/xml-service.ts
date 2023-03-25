@@ -1,5 +1,5 @@
 import {BaseService} from "../base-service";
-import {AceLinters} from "../../types";
+import {LanguageService, XmlServiceOptions} from "../../types";
 import * as lsp from "vscode-languageserver-protocol";
 import {DocumentCstNode, parse} from "@xml-tools/parser";
 import {buildAst} from "@xml-tools/ast";
@@ -13,10 +13,9 @@ import {
     parsingErrorToDiagnostic
 } from "./xml-converters";
 import {TextDocumentItem} from "vscode-languageserver-protocol";
-import XmlServiceOptions = AceLinters.XmlServiceOptions;
 
 
-export class XmlService extends BaseService<XmlServiceOptions> implements AceLinters.LanguageService {
+export class XmlService extends BaseService<XmlServiceOptions> implements LanguageService {
     $service;
     schemas: { [schemaUri: string]: string } = {};
 

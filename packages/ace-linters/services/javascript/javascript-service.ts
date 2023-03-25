@@ -1,10 +1,10 @@
 import {BaseService} from "../base-service";
-import {AceLinters} from "../../types";
+import {JavascriptServiceOptions, LanguageService} from "../../types";
 import * as lsp from "vscode-languageserver-protocol";
 import {Linter} from "./lib";
 import {toDiagnostics} from "./eslint-converters";
 
-export class JavascriptService extends BaseService<AceLinters.JavascriptServiceOptions> implements AceLinters.LanguageService {
+export class JavascriptService extends BaseService<JavascriptServiceOptions> implements LanguageService {
     $service;
     $defaultEnv = {
         browser: false,

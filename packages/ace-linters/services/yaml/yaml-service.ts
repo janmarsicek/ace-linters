@@ -1,12 +1,10 @@
 import {BaseService} from "../base-service";
-import {AceLinters} from "../../types";
+import type {LanguageService, YamlServiceOptions} from "../../types";
 import * as lsp from "vscode-languageserver-protocol";
 import {getLanguageService} from "./lib";
 import {TextDocumentIdentifier, TextDocumentItem} from "vscode-languageserver-protocol";
 
-type YamlServiceOptions = AceLinters.YamlServiceOptions;
-
-export class YamlService extends BaseService<YamlServiceOptions> implements AceLinters.LanguageService {
+export class YamlService extends BaseService<YamlServiceOptions> implements LanguageService {
     $service;
     schemas: { [schemaUri: string]: string } = {};
 

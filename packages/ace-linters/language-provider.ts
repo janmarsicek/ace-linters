@@ -1,16 +1,14 @@
-import {Ace, Range as AceRange} from "ace-code";
+import {Range as AceRange} from "ace-code";
+import type {Ace} from "ace-code";
 import {DescriptionTooltip} from "./components/description-tooltip";
-import {AceLinters} from "./types";
-import Tooltip = AceLinters.Tooltip;
+import {Tooltip, ServiceOptions, ServiceOptionsMap} from "./types";
 import {FormattingOptions} from "vscode-languageserver-protocol";
 import {MarkDownConverter} from "./types";
 import {CommonConverter} from "./type-converters/common-converters";
 import {IMessageController} from "./types/message-controller-interface";
-import ServiceOptions = AceLinters.ServiceOptions;
-import Editor = Ace.Editor;
-import EditSession = Ace.EditSession;
-import Completion = Ace.Completion;
-import ServiceOptionsMap = AceLinters.ServiceOptionsMap;
+type Editor = Ace.Editor;
+type EditSession = Ace.EditSession;
+type Completion = Ace.Completion;
 import {MessageController} from "./message-controller";
 import {
     fromAceDelta,
